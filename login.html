@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>Movies</div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/register.html">Register</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div id="toggle-menu">&#9776;</div>
+        </nav>
+    </header>
+    <div class="title">
+        <h1 class="#">Beinvenue dans notre site</h1>
+    </div>
+    <main>
+        <div id="app">
+
+            <form action="" id="login" method="POST">
+                <h2>Connexion</h2>
+
+                <div class="form-row flex">
+                    <input type="email" pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$" class="flex-1" name="email"
+                        placeholder="Your email ...">
+                </div>
+                <div class="error" id="error-email"></div>
+
+                <div class="form-row flex relative">
+                    <input type="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" class="flex-1"
+                        name="password" placeholder="Your password ...">
+                    <i class="fas icon-password fa-eye  fa-eye-slash absolute"></i>
+                </div>
+                <div class="error" id="error-password"></div>
+
+                <div class="form-row flex">
+                    <button class="submit flex-1" disabled>Se connecter</button>
+                </div>
+                <div class="form-row">
+                    <p class="form-info">Vous n'avez pas de compte ? Si oui, <a href="/register.html">cliquez ici</a>
+                        pour vous s'inscrire.</p>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Movies App. Tous droits réservés By <a href="#">Espoir-soft Informatique</a> .</p>
+        </div>
+    </footer>
+    <noscript>JavaScript n'est pas activé sur votre ordinateur. Merci de l'activer dans les paramètres de votre
+        navigateur.</noscript>
+    <script src="/assets/js/component/listeners.js"></script>
+    <script src="/assets/js/component/menu.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

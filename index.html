@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Manager</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div> Movies </div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/register.html">Register</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div id="toggle-menu">&#9776;</div>
+        </nav>
+    </header>
+    <div class="title">
+        <h1 class="#">Découvrez la collection de nos films</h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="film-cards" id="film-cards"></div>
+            <button id="add-film-btn" class="add-film-btn">Ajouter un film</button>
+        </div>
+
+        <div id="add-film-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <form id="film-form">
+                    <label for="title">Titre :</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="director">Réalisateur :</label>
+                    <input type="text" id="director" name="director" required>
+                    <label for="year">Année :</label>
+                    <input type="date" id="year" name="year" />
+                    <label for="description">Description :</label>
+                    <textarea id="description" name="description" required></textarea>
+                    <div class="form-actions">
+                        <button type="submit" id="add-film">Ajouter un film</button>
+                        <button type="submit" id="update-film" style="display: none;">Mettre à jour le film</button>
+                        <button type="button" id="cancel-update" style="display: none;">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="edit-film-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <form id="edit-film-form">
+                    <label for="edit-title">Titre :</label>
+                    <input type="text" id="edit-title" name="edit-title" required>
+                    <label for="edit-director">Réalisateur :</label>
+                    <input type="text" id="edit-director" name="edit-director" required>
+                    <label for="edit-year">Année :</label>
+                    <input type="number" id="edit-year" name="edit-year" required>
+                    <label for="edit-description">Description :</label>
+                    <textarea id="edit-description" name="edit-description" required></textarea>
+                    <div class="form-actions">
+                        <button type="submit" id="save-changes">Enregistrer les modifications</button>
+                        <button type="button" id="cancel-edit">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Movies App. Tous droits réservés By <a href="#">Espoir-soft Informatique</a> .</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/component/menu.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
